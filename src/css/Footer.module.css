@@ -1,0 +1,85 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 29px;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 100%;
+}
+  
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+  
+.footer_links {
+    margin-bottom: 11px;
+    font-weight: 500;
+}
+
+.language {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.rus_lang {
+    color: #FFA542;
+    margin-right: 15px;
+}
+
+.language_icon {
+    background-image: url("../icons/language.svg");
+    display: flex;
+    width: 20px;
+    height: 20px; 
+}
+
+.footer_social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.vk_icon {
+    background-image: url("../logos/VK.svg");
+    display: flex;
+    width: 30px;
+    height: 21px; 
+}
+
+.telegram_icon {
+    background-image: url("../logos/Telegram.svg");
+    display: flex;
+    width: 30px;
+    height: 30px; 
+}
+
+.ws_icon {
+    background-image: url("../logos/Whatsapp.svg");
+    display: flex;
+    width: 30px;
+    height: 30px; 
+}
+  
+  /* .listItem a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 17px;
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: fit-content;
+  } */
