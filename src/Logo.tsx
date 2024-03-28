@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
-import style from "./css/Home.module.css";
+import style from "./css/Logo.module.css";
 
-function Home() {
+function Logo() {
   return (
     <Link className={style.link} to="/">
       <h1 className={style.logo}>QPICK</h1>
@@ -9,4 +9,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Logo

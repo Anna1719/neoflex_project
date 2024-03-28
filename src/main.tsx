@@ -4,22 +4,19 @@ import MainPage from './MainPage.tsx'
 import Header from './Header.tsx'
 import Footer from './Footer.tsx'
 import './index.css'
+import style from './css/Main.module.css'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-// В корзине всё слетает в вёрстке, я не понимаю почему
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
+      <div className={style.wrapper}>
         <Header/>
-        <div>
+        <div className={style.outlet}>
           <Outlet/>
         </div>
-        <div>
           <Footer/>
-        </div>
       </div>
     ),
     children:[
@@ -32,8 +29,6 @@ const router = createBrowserRouter([
         element: <div>CART</div>
       }
     ]
-    // errorElement: <ErrorPage />,
-    // loader: rootLoader,
   },
 ]);
 
