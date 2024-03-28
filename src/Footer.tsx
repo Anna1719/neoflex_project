@@ -1,4 +1,4 @@
-import Home from './Home'
+import Logo from './Logo'
 import {Link} from "react-router-dom";
 import style from "./css/Footer.module.css";
 
@@ -7,7 +7,7 @@ import style from "./css/Footer.module.css";
 function Footer () {
   return (
     <div className={style.wrapper}>
-      <Home />
+      <Logo/>
       <div className={style.footer_links}>
         <div className={style.link}>Избранное</div>
         <Link to={"/CART"} className={style.link}>Корзина</Link>
