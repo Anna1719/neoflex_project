@@ -12,10 +12,10 @@
     display: flex;
     gap: 30px;
     align-items: center;
-   justify-content: center;
+    justify-content: center;
 }
 
-.heart_icon {
+/* .heart_icon {
   background-image: url("../icons/like.svg");
   display: flex;
   width: 23px;
@@ -26,4 +26,4 @@
   background-image: url("../icons/cart.svg");
   width: 24px;
   height: 25px; 
-}
+} */

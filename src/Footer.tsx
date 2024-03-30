@@ -1,5 +1,6 @@
 import Logo from './Logo'
 import {Link} from "react-router-dom";
+import { LanguageIcon, TGIcon, VKIcon, WAppIcon } from './IconData';
 import style from "./css/Footer.module.css";
 
 // Линки кроме корзины не прописаны, но как их сделать понятно
@@ -16,15 +17,15 @@ function Footer () {
       <div className={style.footer_links}>
         <div className={style.link}>Условия сервиса</div>
         <div className={style.language}>
-            <div className={style.language_icon}/>
+            <LanguageIcon />
             <span className={style.rus_lang}>Рус</span>
             <span>Eng</span>
         </div>
       </div>
       <div className={style.footer_social}>
-        <div className={style.vk_icon}/>
-        <div className={style.telegram_icon}/>
-        <div className={style.ws_icon}/>
+        <VKIcon />
+        <TGIcon />
+        <WAppIcon />
       </div>
     </div>
     )

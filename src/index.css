@@ -19,7 +19,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-html {
+html, #root {
   height: 100%;
 }
 
@@ -48,4 +48,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a:hover {
+  color: orange;
+  transition: color 0.3s;
 }
