@@ -2,15 +2,16 @@
 import { cartContext } from '../provider/CartProvider';
 import { useContext } from "react";
 import style from "./Cart.module.css";
+import { CheckOut } from './Checkout';
 
 export const Cart = () => {
 
   const { cart, addItem, deleteOneItem, deleteItem } =
     useContext(cartContext);
 
-  const getCartPrice = () => {
-    return cart.reduce((current, element) => current + element.price * element.count, 0);
-  };
+  // const getCartPrice = () => {
+  //   return cart.reduce((current, element) => current + element.price * element.count, 0);
+  // };
 
   return (
     <div className={style.wrapper}>
@@ -44,13 +45,14 @@ export const Cart = () => {
             </div>
           ))}
         </div>
-        <div className={style.checkout}>
+        <CheckOut/>
+        {/* <div className={style.checkout}>
           <div className={style.checkout_top}>
             <div>Итого</div>
             <div>{getCartPrice()}</div>
           </div>
           <button className={style.checkout_button}>Перейти к оформлению</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -24,13 +24,15 @@ const getInitialState = () => {
     return cart ? JSON.parse(cart) : [];
 };
 
-// export const getCartLength = (items:IContext) =>{
-//   const cartLength = 0;
+export const getCartLength = (cart : CartItem[]) => {
 
-//   items.cart.map((item) => (
-//     cartLength += item.count
-//   ))
-// }
+  let cartLength = 0;
+
+  cart.forEach(element => {
+    cartLength += element.count;   
+  });
+  return cartLength;
+}
 
 const CartProvider = ({children}:{children:React.ReactNode}) => {
 
@@ -42,10 +44,12 @@ const CartProvider = ({children}:{children:React.ReactNode}) => {
 
     const addItem = (item:CartItem) => {
 
+      getCartLength;
+
         const element_index = cart.findIndex((element) => element.id === item.id);
 
         if (element_index === -1) {
-            const new_item = { ...item };
+            const new_item = { ...item, count : 0};
             new_item.count += 1;
       
             setCart([...cart, new_item]);
@@ -58,8 +62,8 @@ const CartProvider = ({children}:{children:React.ReactNode}) => {
       
     };
 
-    const deleteOneItem = (item: CartItem) => {
-        const element_index = cart.findIndex((element) => element.id === item.id);
+    const deleteOneItem = (cart_item: CartItem) => {
+        const element_index = cart.findIndex((element) => element.id === cart_item.id);
         const new_cart = [...cart];
         if (new_cart[element_index].count !== 1) {
           new_cart[element_index].count -= 1;
@@ -67,7 +71,7 @@ const CartProvider = ({children}:{children:React.ReactNode}) => {
         } 
         else {
           setCart((cart) => [
-            ...cart.filter((item: CartItem) => item.id !== item.id),
+            ...cart.filter((item: CartItem) => item.id !== cart_item.id),
           ]);
         }
     }; 

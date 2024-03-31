@@ -7,6 +7,7 @@ import './index.css'
 import style from './main_page/Main.module.css'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import CartProvider from './provider/CartProvider.tsx'
+import { Cart } from './cart/Cart.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/cart",
-        element: <div>CART</div>
+        element: <Cart/>
       }
     ]
   },
