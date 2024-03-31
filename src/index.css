@@ -23,7 +23,8 @@ html, #root {
   height: 100%;
 }
 
-body h1,
+body,
+h1,
 h2,
 h3,
 h4,
@@ -51,6 +52,6 @@ button:focus-visible {
 }
 
 a:hover {
-  color: orange;
+  color: #FFA542;
   transition: color 0.3s;
 }

@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import style from "./css/Logo.module.css";
+import style from "./Logo.module.css";
 
 function Logo() {
   return (

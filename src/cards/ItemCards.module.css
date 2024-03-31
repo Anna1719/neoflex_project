@@ -1,8 +1,5 @@
 .wrapper {
-  /* flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
-  min-height: 100%; */
+
 }
 
 .title {
@@ -84,12 +81,6 @@
   justify-self: start;
   margin-top: 5px;
 }
-
-/* .ico_rate {
-  background-image: url("../icons/rate.svg");
-  width: 25px;
-  height: 23px;
-} */
 
 .rate {
   color: #838383;

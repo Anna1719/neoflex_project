@@ -1,7 +1,7 @@
-import Logo from './Logo'
+import Logo from '../logo/Logo'
 import {Link} from "react-router-dom";
-import { LanguageIcon, TGIcon, VKIcon, WAppIcon } from './IconData';
-import style from "./css/Footer.module.css";
+import { LanguageIcon, TGIcon, VKIcon, WAppIcon } from '../icons/IconData';
+import style from "./Footer.module.css";
 
 // Линки кроме корзины не прописаны, но как их сделать понятно
 

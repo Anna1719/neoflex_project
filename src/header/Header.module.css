@@ -15,15 +15,6 @@
     justify-content: center;
 }
 
-/* .heart_icon {
-  background-image: url("../icons/like.svg");
-  display: flex;
-  width: 23px;
-  height: 20px; 
+.cart_icon:hover svg path{
+  fill: #FFA542;
 }
-
-.cart_icon {
-  background-image: url("../icons/cart.svg");
-  width: 24px;
-  height: 25px; 
-} */
