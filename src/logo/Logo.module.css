@@ -6,6 +6,11 @@
     font-style: normal;
     color: #101010;
   }
+
+  .logo:hover {
+    color: #FFA542;
+    cursor: pointer;
+  }
   
   .link {
     text-decoration: none;

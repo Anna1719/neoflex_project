@@ -11,6 +11,15 @@
     width: 100%;
     height: 142px;
 }
+
+.footer_links {
+    margin-bottom: 11px;
+    font-weight: 500;
+}
+
+.footer_links>div {
+    margin-top: 5px;
+}
   
 .link {
     text-decoration: none;
@@ -19,11 +28,6 @@
     margin: 0;
 }
   
-.footer_links {
-    margin-bottom: 11px;
-    font-weight: 500;
-}
-
 .language {
     margin-top: 25px;
     display: grid;
@@ -35,38 +39,20 @@
     margin-right: 15px;
 }
 
-.language_icon {
-    background-image: url("../icons/language.svg");
-    display: flex;
-    width: 20px;
-    height: 20px; 
+.language>span:hover {
+    color: #FFA542;
+    cursor: pointer;
 }
 
 .footer_social {
     display: flex;
-    gap: 10px;
+    gap: 18px;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.vk_icon {
-    background-image: url("../logos/VK.svg");
-    display: flex;
-    width: 30px;
-    height: 21px; 
-}
-
-.telegram_icon {
-    background-image: url("../logos/Telegram.svg");
-    display: flex;
-    width: 30px;
-    height: 30px; 
-}
-
-.ws_icon {
-    background-image: url("../logos/Whatsapp.svg");
-    display: flex;
-    width: 30px;
-    height: 30px; 
+.social:hover svg path{
+    fill: #FFA542;
+    cursor: pointer;
 }

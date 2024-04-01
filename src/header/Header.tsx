@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 import { useContext } from 'react';
 import { cartContext, getCartLength} from '../provider/CartProvider';
 import { ItemsNumber } from './items_number/ItemsNumber'
+import { routes } from '../footer/Footer';
 
 function Header () {
 
@@ -15,12 +16,12 @@ function Header () {
         <div className={style.header}>
             <Logo/>
             <div className={style.icon_wrapper}>
-                <Link to={"/LIKE"} className={style.cart_icon}>
+                <Link to={routes.LIKES} className={style.cart_icon}>
                   <ItemsNumber count={0}>
                     <LikeIcon />
                   </ItemsNumber>  
                 </Link>
-                <Link to={"/CART"} className={style.cart_icon}>
+                <Link to={routes.CART} className={style.cart_icon}>
                   <ItemsNumber count={getCartLength(cart)}>
                     <CartIcon />
                   </ItemsNumber>

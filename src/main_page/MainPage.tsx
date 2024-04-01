@@ -1,5 +1,5 @@
 import style from '../cards/ItemCards.module.css'
-import { headphones_regular, headphones_wireless } from '../data/items';
+import { headphones_regular, headphones_wireless } from '../data/Items';
 import { CardsList } from '../cards/CardsList';
 import { useContext } from 'react';
 import { cartContext } from '../provider/CartProvider';
