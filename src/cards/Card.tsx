@@ -23,7 +23,7 @@ export const Card = ({img,title,price,rate,onClickHandler}:IProps) => {
         <RateIcon />
         <div className={style.rate}>{rate}</div> 
       </div>
-        <button type="button" className={style.buy_button} onClick={onClickHandler}>Купить</button>
+        <button className={style.buy_button} onClick={onClickHandler}>Купить</button>
     </div>
   </div>
   )
