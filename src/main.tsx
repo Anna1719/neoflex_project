@@ -1,57 +1,41 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import MainPage from './main_page/MainPage.tsx'
-import Header from './header/Header.tsx'
-import Footer, { routes } from './footer/Footer.tsx'
-import './index.css'
-import style from './main_page/Main.module.css'
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import CartProvider from './provider/CartProvider.tsx'
-import { Cart } from './cart/Cart.tsx'
-import { EmptyPage } from './empty_page/EmptyPage.tsx'
-import { Contacts } from './contacts/Contacts.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { MainLayout } from "./layouts";
+import { ROUTES } from "./components/footer/ui/Footer";
+import CartContextProvider from "./provider";
+import { Error, ProductPage, HomePage, Cart } from "./routes";
+
+import "normalize.css";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div className={style.wrapper}>
-        <Header/>
-        <div className={style.outlet}>
-          <Outlet/>
-        </div>
-          <Footer/>
-      </div>
-    ),
-    children:[
+    element: <MainLayout />,
+    errorElement: <Error />,
+    children: [
       {
-        path: "/",
-        element: <MainPage/>,
+        element: <HomePage />,
+        index: true,
       },
       {
-        path:routes.CART,
-        element: <Cart/>
+        path: ROUTES.CART,
+        element: <Cart />,
       },
       {
-        path:routes.CONTACTS,
-        element: <Contacts/>
+        path: `${ROUTES.PRODUCT}/:product_id`,
+        element: <ProductPage />,
+        index: true,
       },
-      {
-        path:routes.LIKES,
-        element: <EmptyPage/>
-      },
-      {
-        path:routes.TOS,
-        element: <EmptyPage/>
-      }
-    ]
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CartProvider>
+    <CartContextProvider>
       <RouterProvider router={router} />
-    </CartProvider>
-  </React.StrictMode>,
-)
+    </CartContextProvider>
+  </React.StrictMode>
+);

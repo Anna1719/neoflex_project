@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

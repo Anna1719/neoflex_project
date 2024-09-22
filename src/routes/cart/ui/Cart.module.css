@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.empty_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.cards_list {
+    max-width: 613px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
+}
+
+.content {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+
+    @media (max-width: 940px) {
+        flex-direction: column-reverse;
+    }
+}
+
+
+.checkout {
+    justify-self: flex-end;
+    max-width: 350px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
+}

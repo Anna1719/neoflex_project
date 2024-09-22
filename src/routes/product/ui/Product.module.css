@@ -1,0 +1,50 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title_Wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button {
+  width: fit-content;
+  white-space: nowrap;
+  margin-top: 12px;
+}
+
+.buttonsWrapper {
+  display: flex;
+  gap: 30px;
+
+  >div {
+    width: 30%;
+  }
+}

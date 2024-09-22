@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.outlet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 1150px;
+  margin: 28px auto;
+  padding: 0 20px;
+  flex: 1;
+
+  @media (max-width: 768px) {
+
+    padding: 12px;
+  }
+
+  @media (max-width: 520px) {
+
+    padding: 20px;
+  }
+}

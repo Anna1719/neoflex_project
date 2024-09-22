@@ -1,0 +1,11 @@
+.checkout {
+  background: #ffffff;
+  border-radius: 30px;
+  height: fit-content;
+}
+
+.checkout_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 21px 15px;
+}

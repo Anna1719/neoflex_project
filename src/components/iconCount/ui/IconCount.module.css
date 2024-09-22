@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wrapper:hover>svg>path {
+    fill: rgb(90, 87, 81);
+    transition: 0.3s
+}
+
+.count {
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 7px;
+    background: var(--orange);
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}

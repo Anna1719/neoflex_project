@@ -1,30 +1,40 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --white: #ffffff;
+  --orange: #FFA542;
+  --grey: #838383;
+  --black: #000000;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  scrollbar-gutter: stable both-edges;
   background: #EAEAEA;
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  color: var(--black);
 }
 
-html, #root {
+#root {
   height: 100%;
 }
 
-body,
-h1,
+body h1,
 h2,
 h3,
 h4,
@@ -33,25 +43,21 @@ h6 {
   margin: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  font-size: 1em;
-  font-weight: 600;
-  font-family: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #06093a57;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-a:hover {
-  color: #FFA542;
-  transition: color 0.3s;
+input[type=number] {
+}
+
+button {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }

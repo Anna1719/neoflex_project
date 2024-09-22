@@ -1,0 +1,7 @@
+.cards_list {
+  width: 100%;
+}
+
+.cards_list>div {
+  margin-bottom: 20px;
+}
